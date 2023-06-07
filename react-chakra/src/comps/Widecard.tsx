@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Stack, Text, Image, CardFooter, Button,useColorModeValue } from '@chakra-ui/react'
+import { Card, CardBody, Heading, Stack, Text, Image, CardFooter, Button,useColorModeValue, Box } from '@chakra-ui/react'
 
 interface boardgame{
     title:string,
@@ -32,16 +32,19 @@ const Widecard = (props:boardgame) => {
                 </CardBody>
 
                 <CardFooter>
-                <Button variant='solid' bg="brand"
-                _dark={{
-                bg: "brand",
-                }}
-                _hover={{
-                    bg: useColorModeValue('brandlight.500', 'gray.700'),
-                  }}
-                >
-                    Read More
-                </Button>
+                <Box as='a' href='/boardgamedetails'>
+                    <Button variant='solid' bg="brand"
+                    _dark={{
+                    bg: "brand",
+                    }}
+                    _hover={{
+                        bg: useColorModeValue('brandlight.500', 'gray.700'),
+                    }}
+                    >
+                        Read More
+                    </Button>
+                </Box>
+                
                 </CardFooter>
             </Stack>
         </Card>
